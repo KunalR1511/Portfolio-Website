@@ -13,7 +13,13 @@ body{
     font-weight: 400;
     font-style: normal
 }
+/*-------------------------------------------------------------------*/
 
+/*Horizontal Ruler for Separation*/
+#line-1, #line-2{
+    margin-top: 2%;
+}
+/*-------------------------------------------------------------------*/
 
 /*Logo Dimensions*/
 #logo-icon{
@@ -122,11 +128,19 @@ li{
     flex-direction: row;
     margin-left: 5%;
     margin-right: 5%;
+    align-items: center;
+    justify-content: center;
 }
 
-#photo_1, #photo_2, #photo_3{
-    width:30%;
-    height:50%;
+#photo_1, #photo_3{
+    width:20em;
+    height:30em;
+    margin: 1%;
+}
+
+#photo_2{
+    width: 40%;
+    height: 100%;
     margin: 1%;
 }
 /*-------------------------------------------------------------------*/
@@ -141,11 +155,11 @@ li{
     margin: 7%;    
 }
 #about-image{
-    height: 100%;
+    height: 540px;
 }
 .about-text{
     margin-left: 5%;
-    width: 40%;
+    width: 50%;
 }
 .about-text-heading{
     font-family: "Inter", sans-serif;
