@@ -132,3 +132,11 @@ li{
 /*-------------------------------------------------------------------*/
 
 /*About me Section*/
+
+.about-me{
+    display: flex;
+    flex-direction: row;
+}
+.about-image{
+    height: 10%;
+}
