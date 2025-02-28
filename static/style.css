@@ -138,15 +138,14 @@ li{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 7%;
     
 }
 #about-image{
     height: 100%;
 }
 .about-text{
-    padding-left: 5%;
+    margin-left: 5%;
     width: 40%;
 }
 .about-text-heading{
