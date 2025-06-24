@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 540px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+#name{
+    font-size: large;
+}
+#introduction{
+    font-size: small;
+    line-height: 18px;
+}
+#name, #introduction{
+    margin-bottom: 20px;
+}
+#linkedin_icon, #github_icon, #mail_icon{
+    margin-right: 10px;
+    fill: grey;
+}
+#linkedin_icon:hover, #github_icon:hover, #mail_icon:hover{
+    fill: black;
+}
+
+/*-------------------------------------------*/
+
+.data_section {
+    width: 100%;
+}
+.section_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+.section_list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+}
+#projects, #education, #tools{
+    margin-right: 10px;
+    margin-left: 0;
+    font-weight: bold;
+}
