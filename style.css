@@ -78,6 +78,7 @@ a{
 
 #project_info, #education_info{
     width: 100%;
+    transition: all 0.4s ease;
 }
 .project_card,.education_card{
     width: 100%;

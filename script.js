@@ -25,8 +25,9 @@ SKILL_HEAD.addEventListener("click", () => {
 function displaySection(active_section)
 {
     sectTab.forEach(section => {
-        if(section === active_section)
+        if(section === active_section){
             section.style.display = "block";
+        }
         else
         section.style.display = "none";
     })
