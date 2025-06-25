@@ -28,9 +28,9 @@ a{
     font-size: large;
 }
 #introduction{
-    font-size: small;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 20px;
 }
 #name, #introduction{
     margin-bottom: 25px;
@@ -38,6 +38,7 @@ a{
 #linkedin_icon, #github_icon, #mail_icon{
     margin-right: 10px;
     fill: grey;
+    transition: fill 0.5s ease;
 }
 #linkedin_icon:hover, #github_icon:hover, #mail_icon:hover{
     fill: black;
@@ -59,46 +60,60 @@ a{
     display: flex;
     justify-content: flex-start;
 }
-#projects, #education, #tools{
+.section_list li{
     margin-right: 10px;
     margin-left: 0px;
+    font-weight: 400;
     color: rgb(135, 135, 135);
     transition: color 0.5s ease;
 }
 
-#projects:hover, #education:hover, #tools:hover{
+.section_list li:hover{
     color: rgb(0,0,0);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
 /*--------------------------------------------*/
 
-.project_info{
+#project_info, #education_info{
     width: 100%;
 }
-.project_card{
+.project_card,.education_card{
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 25px;
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease-in;
+    will-change: transform;
 }
-.project_header{
+.project_card:hover, .education_card:hover{
+    transform: translateX(5px);
+}
+.project_header, .education_header{
     display: flex;
     justify-content: space-between;
     margin-bottom: 8px;
 }
-.project_name{
-    font-size: 15px;
+.project_link{
+    font-size: 13px;
+}
+.project_name, .education_institute{
+    font-size: 14px;
     font-weight: 600;
 }
-.project_description{
+.education_score{
+    font-size: 14px;
+    font-weight: 300;
+}
+.project_description, .education_degree{
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 13px;
     color: rgb(135,135,135);
+    font-weight: 400;
 }
 .tech_stack{
-    font-size: small;
+    font-size: 13px;
 }
 .tech_stack span::after{
     content:" /";
@@ -106,6 +121,16 @@ a{
 .tech_stack span:last-child::after{
     content:"";
 }
-.project_card:hover{
-    transform: translateX(12px);
+
+/*------------------------------------------*/
+#project_info{
+    display: block;
 }
+#education_info{
+    display: none;
+}
+#skill_info{
+    display: none;
+}
+
+/*------------------------------------------*/
