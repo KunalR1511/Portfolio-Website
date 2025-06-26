@@ -3,11 +3,12 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
-  font-family: "Inter", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 a{
     text-decoration: none;
@@ -16,13 +17,14 @@ a{
 .container{
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
     width: 540px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
+    padding: 0 20px;
 }
 #name{
     font-size: large;
@@ -34,6 +36,7 @@ a{
 }
 #name, #introduction{
     margin-bottom: 25px;
+    text-align: left;
 }
 #linkedin_icon, #github_icon, #mail_icon{
     margin-right: 10px;
@@ -43,40 +46,35 @@ a{
 #linkedin_icon:hover, #github_icon:hover, #mail_icon:hover{
     fill: black;
 }
-/*-------------------------------------------*/
-
-.data_section {
+.data_section{
     width: 100%;
 }
 .section_wrapper {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-bottom: 25px;
 }
 .section_list {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    gap: 10px;
 }
-.section_list li{
-    margin-right: 10px;
-    margin-left: 0px;
+.section_list li {
     font-weight: 400;
     color: rgb(135, 135, 135);
     transition: color 0.5s ease;
 }
 
 .section_list li:hover{
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     font-weight: 500;
 }
 
-
-/*--------------------------------------------*/
-
-#project_info, #education_info{
+#project_info, #education_info, #skill_info{
     width: 100%;
 }
 .project_card,.education_card{
@@ -92,24 +90,27 @@ a{
 .project_header, .education_header{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-bottom: 8px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
-.project_link{
+.project_link {
     font-size: 13px;
 }
 .project_name, .education_institute{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
 }
-.education_score{
+
+.education_score {
     font-size: 12px;
 }
-.project_description, .education_degree{
+
+.project_description, .education_degree {
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 13px;
-    color: rgb(135,135,135);
+    color: rgb(135, 135, 135);
     font-weight: 400;
 }
 .tech_stack{
@@ -122,31 +123,53 @@ a{
     content:"";
 }
 
-/*------------------------------------------*/
-#project_info{
+#project_info {
     display: block;
-    animation: appearIN 0.3s ease;
+    animation: appearIN 0.4s ease;
 }
 #education_info{
     display: none;
-    animation: appearIN 0.3s ease;
+    animation: appearIN 0.4s ease;
 }
 #skill_info{
     display: none;
-    animation: appearIN 0.3s ease;
+    animation: appearIN 0.4s ease;
 }
 
 @keyframes appearIN {
-    0% {opacity: 0;}
-    10% {opacity: 0.1;}
-    20% {opacity: 0.2;}
-    30% {opacity: 0.3;}
-    40% {opacity: 0.4;}
-    50% {opacity: 0.5;}
-    60% {opacity: 0.6;}
-    70% {opacity: 0.7;}
-    80% {opacity: 0.8;}
-    90% {opacity: 0,9;}
-    100% {opacity: 1;}
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
-/*------------------------------------------*/
+.skill_info {
+    width: 100%;
+}
+.skill_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    justify-items: center;
+    max-width: 720px;
+}
+
+.skill_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill_card svg {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 540px) {
+    .project_header, .education_header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
