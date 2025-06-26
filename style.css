@@ -78,13 +78,12 @@ a{
 
 #project_info, #education_info{
     width: 100%;
-    transition: all 0.4s ease;
 }
 .project_card,.education_card{
     width: 100%;
     margin-top: 30px;
     margin-bottom: 25px;
-    transition: transform 0.2s ease-in;
+    transition: transform 0.15s ease-in;
     will-change: transform;
 }
 .project_card:hover, .education_card:hover{
@@ -103,8 +102,7 @@ a{
     font-weight: 600;
 }
 .education_score{
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 12px;
 }
 .project_description, .education_degree{
     margin-top: 10px;
@@ -126,12 +124,28 @@ a{
 /*------------------------------------------*/
 #project_info{
     display: block;
+    animation: appearIN 0.3s ease;
 }
 #education_info{
     display: none;
+    animation: appearIN 0.3s ease;
 }
 #skill_info{
     display: none;
+    animation: appearIN 0.3s ease;
 }
 
+@keyframes appearIN {
+    0% {opacity: 0;}
+    10% {opacity: 0.1;}
+    20% {opacity: 0.2;}
+    30% {opacity: 0.3;}
+    40% {opacity: 0.4;}
+    50% {opacity: 0.5;}
+    60% {opacity: 0.6;}
+    70% {opacity: 0.7;}
+    80% {opacity: 0.8;}
+    90% {opacity: 0,9;}
+    100% {opacity: 1;}
+}
 /*------------------------------------------*/
